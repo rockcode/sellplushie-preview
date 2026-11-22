@@ -362,3 +362,7 @@ html:lang(zh) .editorial #hero-title {
   letter-spacing:0;
   text-wrap:wrap;
 }
+
+@media (max-width:640px) {
+  .editorial .hero {border-radius:0}
+}
