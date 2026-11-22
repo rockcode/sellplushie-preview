@@ -192,17 +192,16 @@
 }
 .filings{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;padding:1rem 0;border-top:1px solid var(--line);font-size:.875rem;color:var(--muted)}.filings a{text-decoration:underline;text-underline-offset:3px}
 
-/* Chinese display titles use the platform's Hei (sans-serif) family. */
-html:lang(zh) :is(h1,h2,h3,.sample strong),
-[lang|="zh"] :is(h1,h2,h3,.sample strong) {
-  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", "Heiti SC", sans-serif;
-  font-weight: 650;
+/* Chinese headings use scale and spacing to distinguish reading levels. */
+:lang(zh):is(h1,h2,h3,.sample strong) {
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  letter-spacing: 0;
 }
-html:lang(zh) :is(h1,h2,h3) em,
-[lang|="zh"] :is(h1,h2,h3) em {
-  font-style: normal;
-  font-weight: inherit;
-}
+:lang(zh):is(h1,h2,h3) em {font-style:normal;font-weight:inherit}
+html:lang(zh) main h1 {font-weight:600;font-size:clamp(2.45rem,4.5vw,4.8rem);line-height:1.18}
+html:lang(zh) main h2 {font-weight:450;font-size:clamp(1.65rem,2.65vw,2.75rem);line-height:1.3}
+html:lang(zh) main :is(h3,.sample strong) {font-weight:400;font-size:clamp(1.15rem,1.45vw,1.5rem);line-height:1.4}
+html:lang(zh) .social-channel h3 {font-size:1.1rem}
 .editorial{--paper:#fff;--ink:#211f1c;--muted:#59544e;--line:#cfc7bb;--rust:#6b5444;background:var(--paper);color:var(--ink)}
 .editorial .header{min-height:78px;border:0}
 .editorial .brand img,.editorial .brand-period,.editorial .stitch{display:none}
