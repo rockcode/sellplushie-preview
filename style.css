@@ -240,7 +240,8 @@ footer.wrap .filings {padding-block:1.5rem 0}
 .editorial .shelf{padding:clamp(3rem,7vw,7rem) 0}
 .editorial .section-head{border-top:1px solid var(--line);padding-top:1.6rem;margin-bottom:2rem}
 .editorial .gallery{gap:clamp(1rem,2vw,2.4rem)}
-.editorial .sample-img,.editorial .story-photo img,.editorial dialog{border-radius:var(--photo-radius)}
+.editorial .story-photo img,.editorial dialog{border-radius:var(--photo-radius)}
+.editorial .gallery .sample-img{border-radius:clamp(18px,2.1vw,28px);overflow:hidden}
 .editorial .sample-label{padding-block:.4rem}
 .editorial .about{border-top:1px solid var(--line)}
 .editorial .contact,.editorial .story-close{background:#262522;color:#faf7f1}
