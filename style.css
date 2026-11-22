@@ -271,3 +271,4 @@ footer.wrap .filings {padding-block:1.5rem 0}
 
 .editorial .hero{border-radius:var(--photo-radius)}
 .collection-head img{width:auto;max-width:100%;aspect-ratio:1;justify-self:center;border-radius:var(--photo-radius)}
+.collection-head img.collection-stack{width:100%;height:auto;aspect-ratio:auto;max-height:480px;margin-block:1.5rem}@media(max-width:640px){.collection-head img.collection-stack{width:min(100%,420px);margin-block:.25rem}}
