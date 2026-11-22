@@ -191,6 +191,18 @@
   }
 }
 .filings{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;padding:1rem 0;border-top:1px solid var(--line);font-size:.875rem;color:var(--muted)}.filings a{text-decoration:underline;text-underline-offset:3px}
+
+/* Chinese display titles use the platform's Hei (sans-serif) family. */
+html:lang(zh) :is(h1,h2,h3,.sample strong),
+[lang|="zh"] :is(h1,h2,h3,.sample strong) {
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", "Heiti SC", sans-serif;
+  font-weight: 650;
+}
+html:lang(zh) :is(h1,h2,h3) em,
+[lang|="zh"] :is(h1,h2,h3) em {
+  font-style: normal;
+  font-weight: inherit;
+}
 .editorial{--paper:#fff;--ink:#211f1c;--muted:#59544e;--line:#cfc7bb;--rust:#6b5444;background:var(--paper);color:var(--ink)}
 .editorial .header{min-height:78px;border:0}
 .editorial .brand img,.editorial .brand-period,.editorial .stitch{display:none}
