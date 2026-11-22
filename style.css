@@ -230,12 +230,12 @@ html:lang(zh) :is(h1,h2,h3) em,
 .editorial .story-hero h1 em{color:#746456}
 @media(max-width:640px){.editorial .hero{min-height:565px;padding:3rem 0}.editorial .landscape{object-position:64% center}.editorial .hero:before{background:linear-gradient(0deg,#181610bf,transparent 100%)}.editorial .header{min-height:66px}.editorial .brand{font-size:1.5rem}.editorial .gallery{gap:2rem}}
 .catalog-link{display:inline-block;margin-top:2rem}
-.collection-hero{background:#e9e5df}
+.collection-hero{background:#d7d6d3}
 .collection-head{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:6%;padding-block:2rem}
 .collection-head h1{font-size:clamp(3rem,6.5vw,7rem);letter-spacing:-.05em;margin:.8rem 0}
 .collection-head p:not(.eyebrow){max-width:29rem;line-height:1.7}
 .collection-head a,.collection-list a{display:inline-block;margin-top:.85rem}
-.collection-head img{width:100%;height:clamp(290px,36vw,480px);object-fit:contain;mix-blend-mode:multiply}
+.collection-head img{width:100%;height:clamp(290px,36vw,480px);object-fit:contain}
 .collection-list{padding-block:clamp(3rem,7vw,7rem)}
 .collection-list h3{font:400 2rem/1.14 var(--serif);margin:.4rem 0}
 .collection-list article small{display:block;margin-top:1rem;color:var(--muted)}
