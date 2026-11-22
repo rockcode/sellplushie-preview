@@ -193,19 +193,30 @@
 .filings{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;padding:1rem 0;border-top:1px solid var(--line);font-size:.875rem;color:var(--muted)}.filings a{text-decoration:underline;text-underline-offset:3px}
 
 @font-face{font-family:Studio Song;src:url('./fonts/story-song.ttf');font-weight:400;font-display:swap}
-/* Chinese editorial titles use Song throughout the page and sample dialog. */
-html:lang(zh) #top :is(h1,h2,h3,.sample strong,.eyebrow) {
-  font-family: "Studio Song", "Songti SC", "Noto Serif CJK SC", SimSun, serif;
-  font-weight: 400;
-  letter-spacing: .015em;
+/* Editorial voice and buying information have different reading rhythms. */
+html:lang(zh) {
+  --zh-hei: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  --zh-song: "Studio Song", "Songti SC", "Noto Serif CJK SC", SimSun, serif;
 }
-html:lang(zh) #main h1 {font-size:clamp(2.1rem,3.65vw,3.8rem);line-height:1.25}
+html:lang(zh) #top {font-family:var(--zh-hei)}
+html:lang(zh) #top :is(h1,h2,h3,.sample strong,.eyebrow) {
+  font-family:var(--zh-hei);
+  font-weight:500;
+  letter-spacing:0;
+}
+html:lang(zh) #top :is(.hero h1,.about h2,.story-hero h1,.story-reading h2,.story-material h2,.story-close h2,blockquote) {
+  font-family:var(--zh-song);
+  font-weight:400;
+  letter-spacing:.025em;
+}
+html:lang(zh) #main h1 {font-size:clamp(2.15rem,3.7vw,3.85rem);line-height:1.25}
 html:lang(zh) #main h2 {font-size:clamp(1.45rem,2.1vw,2.15rem);line-height:1.4}
-html:lang(zh) #main :is(h3,.sample strong) {font-size:clamp(1.08rem,1.35vw,1.35rem);line-height:1.5;font-weight:400}
-html:lang(zh) #main :is(h1,h2,h3) em {font-style:normal;font-weight:inherit}
-html:lang(zh) #main .eyebrow {font-weight:400}
-html:lang(zh) #main .social-channel h3 {font-size:1.05rem}
-
+html:lang(zh) #top :is(h3,.sample strong) {font-size:clamp(1.1rem,1.35vw,1.4rem);line-height:1.45}
+html:lang(zh) #top :is(h1,h2,h3) em {font-style:normal;font-weight:inherit}
+html:lang(zh) #top .eyebrow {font-weight:400;letter-spacing:.08em}
+html:lang(zh) #main .social-channel h3 {font-size:1.1rem}
+html:lang(zh) #top :is(.button,.underlink,.fields label) {font-weight:500}
+html:lang(zh) .story-prose {line-height:1.85}
 .editorial{--paper:#fff;--ink:#211f1c;--muted:#59544e;--line:#cfc7bb;--rust:#6b5444;background:var(--paper);color:var(--ink)}
 .editorial .header{min-height:78px;border:0}
 .editorial .brand img,.editorial .brand-period,.editorial .stitch{display:none}
