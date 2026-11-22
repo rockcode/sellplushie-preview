@@ -321,3 +321,38 @@ footer.wrap .filings {padding-block:1.5rem 0}
 .editorial .collection-list .section-head {align-items:baseline}
 .editorial .story-links .underlink,.editorial .collection-list .underlink {min-height:44px}
 .editorial dialog::backdrop {background:rgb(29 27 25 / 72%)}
+
+/* Chinese editorial composition: hero lines, running text and compact catalogue entries. */
+html:lang(zh) .editorial .eyebrow[hidden] {display:none}
+html:lang(zh) .editorial #hero-title,
+html:lang(zh) .editorial #story-title {
+  font-size:clamp(2.25rem,4.75vw,4.6rem);
+  line-height:1.22;
+  letter-spacing:.035em;
+  margin-block:.85rem 1.25rem;
+}
+html:lang(zh) .editorial #hero-title em {color:#fff4de}
+html:lang(zh) .editorial :is(.hero-copy,.story-hero-copy,.collection-head) .eyebrow {
+  gap:.75rem;letter-spacing:.14em
+}
+html:lang(zh) .editorial :is(.hero-copy,.story-hero-copy,.collection-head) .eyebrow::before {
+  content:"";width:2rem;height:1px;background:currentColor;
+}
+html:lang(zh) .editorial :is(.intro,.story-intro,.collection-head p:not(.eyebrow)) {
+  max-inline-size:28em;line-height:1.85;line-break:strict;text-wrap:pretty
+}
+html:lang(zh) .editorial .story-prose {max-inline-size:33em;line-height:1.95;text-wrap:pretty;line-break:strict}
+html:lang(zh) .editorial .story-reading h2 {max-width:none}
+html:lang(zh) .editorial .story-material blockquote {max-width:21em;line-height:1.65;padding-inline-start:1.25rem}
+html:lang(zh) .editorial .collection-list article p {line-height:1.8;text-wrap:pretty}
+@media(min-width:900px){
+  html:lang(zh) .editorial .collection-list .gallery {grid-template-columns:repeat(2,minmax(0,1fr));gap:2.5rem 3.25rem}
+  html:lang(zh) .editorial .collection-list article {
+    display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);
+    column-gap:clamp(1rem,2vw,2rem);align-content:center;border-top:1px solid var(--line);padding-top:1.4rem;
+  }
+  html:lang(zh) .editorial .collection-list .sample-img {grid-column:1;grid-row:1 / span 4;align-self:center}
+  html:lang(zh) .editorial .collection-list article :is(small,h3,p,a) {grid-column:2}
+  html:lang(zh) .editorial .collection-list article small {margin-top:auto}
+  html:lang(zh) .editorial .collection-list article a {align-self:start;justify-self:start}
+}
