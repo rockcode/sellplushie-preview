@@ -193,10 +193,10 @@
 .filings{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;padding:1rem 0;border-top:1px solid var(--line);font-size:.875rem;color:var(--muted)}.filings a{text-decoration:underline;text-underline-offset:3px}
 
 @font-face{font-family:Studio Song;src:url('./fonts/story-song.ttf');font-weight:400;font-display:swap}
-/* Song headings contrast with sans-serif product labels and controls. */
-html:lang(zh) #main :is(h1,h2,h3,.sample strong) {
-  font-family: "PingFang SC", "Microsoft YaHei Light", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
-  font-weight: 300;
+/* Chinese editorial titles use Song throughout the page and sample dialog. */
+html:lang(zh) #top :is(h1,h2,h3,.sample strong,.eyebrow) {
+  font-family: "Studio Song", "Songti SC", "Noto Serif CJK SC", SimSun, serif;
+  font-weight: 400;
   letter-spacing: .015em;
 }
 html:lang(zh) #main h1 {font-size:clamp(2.1rem,3.65vw,3.8rem);line-height:1.25}
@@ -206,7 +206,6 @@ html:lang(zh) #main :is(h1,h2,h3) em {font-style:normal;font-weight:inherit}
 html:lang(zh) #main .eyebrow {font-weight:400}
 html:lang(zh) #main .social-channel h3 {font-size:1.05rem}
 
-html:lang(zh) #main :is(h1,h2) {font-family:"Studio Song","Songti SC","Noto Serif CJK SC",SimSun,serif;font-weight:400}
 .editorial{--paper:#fff;--ink:#211f1c;--muted:#59544e;--line:#cfc7bb;--rust:#6b5444;background:var(--paper);color:var(--ink)}
 .editorial .header{min-height:78px;border:0}
 .editorial .brand img,.editorial .brand-period,.editorial .stitch{display:none}
