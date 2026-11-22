@@ -217,6 +217,9 @@ html:lang(zh) #top .eyebrow {font-weight:400;letter-spacing:.08em}
 html:lang(zh) #main .social-channel h3 {font-size:1.1rem}
 html:lang(zh) #top :is(.button,.underlink,.fields label) {font-weight:500}
 html:lang(zh) .story-prose {line-height:1.85}
+footer.wrap {padding-bottom:calc(clamp(3rem,6vw,6rem) + env(safe-area-inset-bottom,0px))}
+footer.wrap .foot {padding-block:clamp(2.5rem,4vw,4rem) clamp(1.75rem,3vw,3rem)}
+footer.wrap .filings {padding-block:1.5rem 0}
 .editorial{--paper:#fff;--ink:#211f1c;--muted:#59544e;--line:#cfc7bb;--rust:#6b5444;background:var(--paper);color:var(--ink)}
 .editorial .header{min-height:78px;border:0}
 .editorial .brand img,.editorial .brand-period,.editorial .stitch{display:none}
